@@ -1,0 +1,271 @@
+:root {
+    --primario: #ffc107;
+    --oscuro: #212121;
+    --secundario: #0097a7;
+}
+
+html {
+    box-sizing: border-box;
+    min-height: 100%;
+    font-size: 62.5%;
+}
+*, *:before, *:after {
+    box-sizing: inherit;
+}
+
+body {
+    font-family: 'Krub', sans-serif;
+    font-size: 1.6rem;
+    background-image: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+    min-height: 100%;
+}
+
+/* GLOBALES */
+
+.contenedor {
+    max-width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
+    -webkit-box-shadow: 0px 11px 15px -9px rgba(0,0,0,0.63);
+    -moz-box-shadow: 0px 11px 15px -9px rgba(0,0,0,0.63);
+    box-shadow: 0px 11px 15px -9px rgba(0,0,0,0.63);
+}
+
+img {
+    max-width: 100%;
+}
+
+h1, h2, h3 {
+    margin: 0;
+}
+
+p {
+    font-size: 1.8rem;
+    line-height: 2;
+}
+
+/* ICONOS */
+
+
+
+/* BOTONES */
+
+.boton {
+    display: inline-block;
+    padding: 1rem 5rem;
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+    font-size: 2rem;
+    text-transform: uppercase;
+    background-color: var(--secundario);
+    border-radius: 4px;
+    line-height: normal;
+    margin-top: 1rem;
+    border: none;
+}
+
+/* HEADER */
+
+.header-sitio {
+    background-color: #ffffff;
+}
+
+.barra {
+    text-align: center;
+    padding: 1.6rem 0rem;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+}
+
+.barra a {
+    text-decoration: none;
+    color: var(--oscuro);
+    display: block;
+    font-size: 2.2rem;
+    margin-bottom: 3rem;
+
+}
+
+.barra a:last-of-type {
+    margin: 0;
+}
+
+@media (min-width: 768px) {
+    .barra {
+        flex-direction: row;
+        align-items: center;
+    }
+
+    .barra a {
+        display: inline-block;
+        margin: 0;
+    }
+}
+
+/* HERO */
+
+.banner {
+    
+    background-image: url(../img/hero.jpg);
+    margin-bottom: 2rem;
+    height: 45rem;
+    color: #ffffff;
+    position: relative;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.banner::after {
+    content: '';
+    background-color: rgba(0, 0, 0, 0.7);
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+}
+
+
+.contenido-banner {
+    position: relative;
+    z-index: 1;
+    text-align: center;
+    padding: 5rem 0;
+}
+
+
+
+.contenido-banner i {
+    color: var(--primario);
+    font-size: 5rem;
+}
+
+/* MAIN */
+
+main {
+    background-color: #ffffff;
+    border-radius: 1rem;
+    padding: 5rem 3rem 3rem 3rem;
+    margin: 4rem auto;
+}
+
+main h2,
+main h3 {
+    text-align: center;
+}
+
+.contenedor-servicios {
+    padding: 4rem;
+}
+
+.servicios {
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+@media (min-width: 768px) {
+    .contenedor-servicios {
+        text-align: left;
+        display: flex;
+        justify-content: space-between;
+    }
+    .servicios {
+        flex-basis: calc(33.3% - 2rem);
+    }
+    
+}
+
+main h3 {
+    color: var(--secundario);
+    font-weight: 300;
+    font-size: 3rem;
+    margin-bottom: 2rem;
+}
+
+.iconos-seccion {
+    background-color: var(--primario);
+    border-radius: 100%;
+    height: 10rem;
+    width: 10rem;
+    padding: 1rem;
+    text-align: center;
+    font-size: xx-large;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+
+/* CONTACTO */
+
+
+form {
+    background-color: gray;
+    border-radius: 1rem;
+    text-align: center;
+    padding: 2rem;
+    margin: 2rem auto;
+}
+
+@media (min-width: 768px) {
+    form {
+        max-width: 800px;
+        margin 0 auto;
+
+    }
+    
+}
+
+form legend {
+    color: var(--primario);
+    font-size: 1.8rem;
+    margin: 2rem;
+    text-align: center;
+}
+
+.campo label {
+    color: #ffffff;
+}
+
+@media (min-width: 768px) {
+
+    .contenedor-formulario {
+        padding: 2rem;
+        display: flex;
+        align-items: center;
+        flex-wrap: wrap;
+        justify-content: space-between;
+    }
+
+    .campo {
+        display: flex;
+        align-items: center;
+    }
+
+    .campo label {
+        flex: 0 0 90px;
+    }
+
+    .campo input {
+        flex: 1;
+        height: 4rem;
+    }
+
+    .campo textarea {
+        flex: 1;
+        height: 6rem;
+    }
+    
+}
+
+
+
+
